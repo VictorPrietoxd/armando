@@ -120,8 +120,8 @@ body{
 }
 
 .presentacion{
-    height: 99%;
-    width: 56%;
+    height: 95%;
+    width: 54%;
     display: flex;
     justify-content: center;
     align-items:center;
@@ -130,22 +130,22 @@ body{
 }
 
 .presentacion .control{
-    height: 85%;
+    height: 100%;
     width: 95%;
     grid-row:2/3;
     grid-column:2/3;
     display: grid;
     grid-template-rows: 4em 
                         2em
-                        8em
+                        7em
                         .3em
                         3.2em
                         1.5em
                         1.5em
-                        5em
+                        4em
                         1.5em
                         1.5em
-                        5em
+                        4em
                        ;
     grid-template-columns: repeat(11,1fr);
     grid-gap: .5em;
