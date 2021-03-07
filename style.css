@@ -1,0 +1,332 @@
+* , *::after , *::before{
+    box-sizing: border-box;
+}
+
+
+:root{
+    --main-color:#4dac79;
+    --gray-soft:rgb(150,150,150)
+}
+body{
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(49, 45, 45);
+    background: linear-gradient(319deg, rgba(36,41,39,1) 0%, rgba(30,52,48,1) 10%, rgba(30,52,48,1) 14%, rgba(30,52,48,1) 20%, rgba(30,52,48,1) 24%, rgba(30,53,48,1) 30%, rgba(30,54,49,1) 37%, rgba(30,54,49,1) 42%, rgba(30,54,49,1) 46%, rgba(30,55,50,1) 50%, rgba(29,55,50,1) 54%, rgba(29,56,51,1) 55%, rgba(30,59,53,1) 59%, rgba(31,62,55,1) 62%, rgba(32,64,57,1) 65%, rgba(32,66,58,1) 67%, rgba(32,68,59,1) 69%, rgba(32,69,59,1) 70%, rgba(33,71,60,1) 72%, rgba(34,73,62,1) 75%, rgba(34,75,63,1) 78%, rgba(34,77,64,1) 80%, rgba(35,80,66,1) 83%, rgba(35,81,67,1) 84%, rgba(36,83,68,1) 86%, rgba(36,85,69,1) 88%, rgba(36,85,69,1) 88%, rgba(37,87,71,1) 91%, rgba(38,91,74,1) 92%, rgba(41,100,80,1) 94%, rgba(42,104,83,1) 95%, rgba(43,108,86,1) 96%, rgba(44,113,89,1) 97%, rgba(54,121,97,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    height: 80%;
+    width: 70%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: #1c1c1c;
+}
+
+.controlBarraAndMeInfo{
+    height: 100%;
+    width:43%;
+    display: flex;
+    align-items: center;
+}
+
+.barra{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 15%;
+}
+
+.barra .menu{
+    height: 10%;
+    width: 100%;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4em;
+} 
+
+.barra .icons{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.1em;
+    color: var(--gray-soft);
+}
+
+.barra .icons i:hover , .barra .descargar i:hover , .meInfo .controlInfo .iconInfo i:hover{
+    cursor: pointer;
+    color:var(--main-color);
+}
+
+.barra .descargar{
+    height: 13%;
+    width: 100%;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--gray-soft);
+}
+
+
+.meInfo{
+    background-color: #252525;
+    background-image: url(./imagen.png);
+    background-repeat: no-repeat;
+    background-size: 1400px 950px;
+    background-position-x: -375px;
+    background-position-y: -35px;
+    height: 110%;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.controlInfo{
+    text-align: center;
+    height: 30%;
+    width: 70%;
+    color: white;
+}
+
+.controlInfo h2{
+    color:var(--main-color);
+}
+
+
+.iconInfo{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px auto;
+    width: 70%;
+}
+
+.meInfo .controlInfo .iconInfo{
+    font-size: 20px;
+    color: white;
+}
+
+.presentacion{
+    height: 98%;
+    width: 56%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    
+    
+}
+
+.presentacion .control{
+    height: 98%;
+    width: 95%;
+    grid-row:2/3;
+    grid-column:2/3;
+    display: grid;
+    grid-template-rows: 4em 
+                        2em
+                        8em
+                        .3em
+                        3.2em
+                        1.5em
+                        1.5em
+                        5em
+                        1.5em
+                        1.5em
+                        5em
+                       ;
+    grid-template-columns: repeat(11,1fr);
+    grid-gap: .5em;
+}
+ 
+.control .aboutMe{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    grid-row:1/2;
+    grid-column: 1/ span 6;
+    font-size: 3.5em;
+    display: flex;
+    align-items: center;
+    color: white;
+    letter-spacing: 1.2px;
+}
+
+.control .year{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    grid-row: 2/3;
+    grid-column: 1/span 4;
+    display: flex;
+    align-items: center;
+    word-spacing: 5px;
+    font-weight: 600;
+    color: var(--main-color);
+
+}
+
+.control .textAboutMe{
+    margin: 0;
+    height:100%;
+    width:100%;
+    grid-row: 3/4;
+    grid-column: 1/12;
+    text-align: justify;
+    color: var(--gray-soft);
+    letter-spacing: 0.5px;
+    word-spacing: 0.1px;
+    line-height: 1.25em;
+}
+
+.control hr{
+    height: 1px;
+    width: 100%;
+    grid-row: 4/5;
+    grid-column:1/12;
+    border: .1px solid rgba(150, 150, 150,.2);
+
+}
+
+.myServices{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    grid-row:5/6;
+    grid-column: 1/span 4;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.fa-desktop{
+    height: 100%;
+    width: 100%;
+    color: var(--main-color);
+    grid-row:6/7;
+    grid-column: 1/2;
+}
+
+.h3Development{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    grid-row: 7/8;
+    grid-column: 1/3;
+    color: white;
+}
+
+.pDevelopment{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    grid-row:8/9;
+    text-align: justify;
+    grid-column: 1/6;
+    color: var(--gray-soft);
+    word-spacing: 1px;
+    letter-spacing: .7px;
+}
+
+.fa-layer-group{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: 3px;
+    grid-row: 9/10;
+    grid-column: 1/2;
+    color: var(--main-color);
+}
+
+.h3DataBase{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    grid-row: 10/11;
+    color: white;
+    grid-column: 1/3;
+    display: flex;
+    align-content: center;
+}
+
+.pDataBase{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    text-align: justify;
+    color: var(--gray-soft);
+    grid-row: 11/12;
+    grid-column: 1/6;
+    word-spacing: 1px;
+    letter-spacing: .7px;
+}
+
+.fa-rocket{
+    grid-row: 6/7;
+    grid-column: 7/11;
+    color: var(--main-color);
+}
+
+.h3Seo{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    grid-row: 7/8;
+    grid-column: 7/11;
+    color: white;
+}
+
+.pSeo{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    grid-row:8/9;
+    text-align: justify;
+    grid-column: 7/12;
+    color: var(--gray-soft);
+    word-spacing: 1px;
+    letter-spacing: .7px; 
+}
+
+.fa-shield-virus{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: 3px;
+    grid-row: 9/10;
+    grid-column: 7/11;
+    color: var(--main-color);
+}
+
+.h3DataS{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    grid-row: 10/11;
+    grid-column: 7/11;
+    color: white;
+}
+
+.pDataS{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    grid-row:11/12;
+    text-align: justify;
+    grid-column: 7/12;
+    color: var(--gray-soft);
+    word-spacing: 1px;
+    letter-spacing: .7px; 
+}
